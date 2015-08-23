@@ -11,6 +11,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The tidy data set is created by running the R Script: CleanData(dir) where
 dir is a string pointing to the top level directory of the unzipped initial
 data set.
+The units and additional information of the data columns are described in the features.txt and features_info.txt files.
 
 The tidy data set contains the training and test data for the activity, subject, mean
 and standard deviation data from the initial data set. This is arranged in the following
