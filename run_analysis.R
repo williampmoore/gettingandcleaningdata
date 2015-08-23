@@ -41,10 +41,10 @@ LoadData <- function(directory)
 ## Returns the data set for the mean and std dev columns
 LoadDataSet <- function(directory)
 {
-  ## List the row numbers for the mean and standard deviation rows
-  meanRows <- c(1,2,3,41,42,43,81,82,83,121,122,123,161,162,163,201,214,227,240,253,266,267,268,345,346,347,424,435,436,503,516,529,542);
-  stdevRows <- c(4,5,6,44,45,46,84,85,86,124,125,126,164,165,166,202,215,228,241,254,269,270,271,348,349,350,427,428,429,504,517,530,543);
-  rows <- c(meanRows, stdevRows);
+  ## List the row numbers for the mean and standard deviation cols
+  meanCols <- c(1,2,3,41,42,43,81,82,83,121,122,123,161,162,163,201,214,227,240,253,266,267,268,345,346,347,424,435,436,503,516,529,542);
+  stdevCols <- c(4,5,6,44,45,46,84,85,86,124,125,126,164,165,166,202,215,228,241,254,269,270,271,348,349,350,427,428,429,504,517,530,543);
+  Cols <- c(meanCols, stdevCols);
   
   ## Get the column names
   colLabelFile <- "../features.txt";
@@ -54,8 +54,8 @@ LoadDataSet <- function(directory)
   dataFile <- paste0("X_", directory, ".txt", collapse="");
   dataSet <- read.table(dataFile, col.names = colLabels);
   
-  ## Return the subset of the data (subset by mean and stddev rows)
-  return(dataSet[rows]);
+  ## Return the subset of the data (subset by mean and stddev Cols)
+  return(dataSet[Cols]);
 }
 
 ## Returns the activity labels for each row
